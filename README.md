@@ -6,7 +6,7 @@ The repository is dedicated to the final project of "Ingegneria del Software (20
 
 </div>
 
-* [Group Components](#Group-Components)
+* [Group Members](#Group-Members)
 * [Features](#features)
 * [Instructions](#instructions)
 
