@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #f7f7f7;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polimi.ingsw.Client.GUI.Controllers.SchoolBoardController">
+    <right>
+        <AnchorPane prefHeight="1080.0" prefWidth="313.0" style="-fx-background-color: #E99869;" BorderPane.alignment="CENTER">
+            <children>
+                <StackPane layoutX="6.0" layoutY="911.0" prefHeight="155.0" prefWidth="343.0">
+                    <children>
+                        <Button fx:id="backButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#back" prefHeight="120.0" prefWidth="266.0">
+                            <graphic>
+                                <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true" prefHeight="116.0" prefWidth="208.0">
+                                    <children>
+                                        <Label fx:id="backLabel" alignment="CENTER" prefHeight="47.0" prefWidth="206.0" text="Back">
+                                            <font>
+                                                <Font name="Papyrus" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Pane HBox.hgrow="ALWAYS" />
+                                        <ImageView fitHeight="44.0" fitWidth="41.0">
+                                            <image>
+                                                <Image url="@../assets/back.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                            </graphic>
+                        </Button>
+                    </children>
+                </StackPane>
+            <StackPane layoutX="7.0" layoutY="715.0" prefHeight="155.0" prefWidth="343.0">
+               <children>
+                  <Button fx:id="otherBoardButton" contentDisplay="RIGHT" disable="true" mnemonicParsing="false" onAction="#otherBoards" prefHeight="120.0" prefWidth="266.0" style="-fx-base: #166796;" visible="false">
+                     <graphic>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true" prefHeight="116.0" prefWidth="208.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="47.0" prefWidth="206.0" text="Other school boards">
+                                 <font>
+                                    <Font name="Papyrus" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <ImageView fitHeight="44.0" fitWidth="41.0">
+                                 <image>
+                                    <Image url="@../assets/eye.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+               </children>
+            </StackPane>
+            <Label fx:id="messageLabel" alignment="CENTER" layoutX="3.0" layoutY="51.0" prefHeight="125.0" prefWidth="345.0">
+               <font>
+                  <Font name="Papyrus" size="20.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="moveToIslandPane" disable="true" layoutX="73.0" layoutY="245.0" prefHeight="150.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ImageView fitHeight="201.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/cerchi.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="57.0" prefWidth="164.0" text="Move to Island">
+                     <font>
+                        <Font name="Papyrus" size="15.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="200.0" onDragDropped="#handleIslandDrop" onDragOver="#handleDropOver" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="7.0" layoutY="540.0" prefHeight="155.0" prefWidth="343.0">
+               <children>
+                  <Button fx:id="useCharacterButton" contentDisplay="RIGHT" disable="true" mnemonicParsing="false" onAction="#useCharacter" prefHeight="120.0" prefWidth="266.0" style="-fx-base: #166796;" visible="false">
+                     <graphic>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true" prefHeight="116.0" prefWidth="208.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="47.0" prefWidth="206.0" text="Use character">
+                                 <font>
+                                    <Font name="Papyrus" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <ImageView fitHeight="44.0" fitWidth="41.0">
+                                 <image>
+                                    <Image url="@../assets/eye.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+               </children>
+            </StackPane>
+            <Label fx:id="phaseLabel" alignment="CENTER" layoutX="17.0" layoutY="-2.0" prefHeight="44.0" prefWidth="319.0">
+               <font>
+                  <Font name="Papyrus" size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </right>
+    <left>
+        <AnchorPane fx:id="anchorPane" prefHeight="1080.0" prefWidth="1561.0" style="-fx-background-color: #f7f7f7;" BorderPane.alignment="CENTER">
+            <children>
+                <StackPane layoutX="1316.0" layoutY="79.0" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="OpponentCard" fitHeight="277.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+                </StackPane>
+                <StackPane layoutX="1316.0" layoutY="746.0" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="MyCard" fitHeight="277.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+                </StackPane>
+            <StackPane fx:id="MyBoard" layoutX="276.0" layoutY="645.0" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="435.0" fitWidth="1005.0">
+                     <image>
+                        <Image url="@../assets/Plancia/Plancia_DEF2.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle fx:id="tableArea" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="364.0" onDragDropped="#handleTableDrop" onDragOver="#handleDropOver" stroke="BLACK" strokeType="INSIDE" translateX="-80.0" width="494.0" />
+                  <Rectangle fx:id="greenArea" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="50.0" onDragDropped="#handleGreenDrop" onDragOver="#handleDropOver" stroke="BLACK" strokeType="INSIDE" translateX="-80.0" translateY="-145.0" visible="false" width="491.0" />
+                  <Rectangle fx:id="redArea" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="50.0" onDragDropped="#handleRedDrop" onDragOver="#handleDropOver" stroke="BLACK" strokeType="INSIDE" translateX="-80.0" translateY="-70.0" visible="false" width="491.0" />
+                  <Rectangle fx:id="yellowArea" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="50.0" onDragDropped="#handleYellowDrop" onDragOver="#handleDropOver" stroke="BLACK" strokeType="INSIDE" translateX="-80.0" visible="false" width="491.0" />
+                  <Rectangle fx:id="pinkArea" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="50.0" onDragDropped="#handlePinkDrop" onDragOver="#handleDropOver" stroke="BLACK" strokeType="INSIDE" translateX="-80.0" translateY="70.0" visible="false" width="491.0" />
+                  <Rectangle fx:id="blueArea" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#1f93ff00" height="50.0" onDragDropped="#handleBlueDrop" onDragOver="#handleDropOver" stroke="BLACK" strokeType="INSIDE" translateX="-80.0" translateY="145.0" visible="false" width="491.0" />
+               </children>
+            </StackPane>
+            <StackPane fx:id="OpponentBoard" layoutX="276.0" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="435.0" fitWidth="1005.0">
+                     <image>
+                        <Image url="@../assets/Plancia/Plancia_DEF2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <Label fx:id="MyNickname" alignment="CENTER" layoutX="39.0" layoutY="828.0" prefHeight="81.0" prefWidth="175.0" text="Player 1">
+               <font>
+                  <Font name="Papyrus" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="OpponentNickname" alignment="CENTER" layoutX="11.0" layoutY="168.0" prefHeight="100.0" prefWidth="231.0" text="Player 2">
+               <font>
+                  <Font name="Papyrus" size="40.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="myCoinImage" fitHeight="80.0" fitWidth="74.0" layoutX="48.0" layoutY="909.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../assets/Moneta_base.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="opponentCoinImage" fitHeight="80.0" fitWidth="74.0" layoutX="48.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../assets/Moneta_base.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="opponentCoin" layoutX="127.0" layoutY="281.0" prefHeight="57.0" prefWidth="72.0" visible="false">
+               <font>
+                  <Font name="Papyrus" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="myCoin" layoutX="118.0" layoutY="921.0" prefHeight="57.0" prefWidth="72.0" visible="false">
+               <font>
+                  <Font name="Papyrus" size="30.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="characterPane" layoutX="1316.0" layoutY="402.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="characterCardImage" fitHeight="277.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+            <Button disable="true" mnemonicParsing="false" onAction="#fullScreen" text="Fullscreen" visible="false" />
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <Separator orientation="VERTICAL" prefHeight="1080.0" prefWidth="0.0" style="-fx-border-width: 5; -fx-border-color: black; -fx-padding: 0;" stylesheets="@../CSS/Separator.css" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

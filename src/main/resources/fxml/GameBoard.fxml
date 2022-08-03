@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="1080.0" maxWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polimi.ingsw.Client.GUI.Controllers.GameBoardController">
+   <right>
+      <AnchorPane maxHeight="1080.0" maxWidth="320.0" prefHeight="1080.0" prefWidth="320.0" style="-fx-background-color: #E99869;" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane layoutX="5.0" layoutY="807.0" prefHeight="155.0" prefWidth="343.0">
+               <children>
+                  <Button fx:id="myBoardButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#viewSchoolBoard" prefHeight="120.0" prefWidth="266.0" style="-fx-base: #166796;">
+                      <graphic>
+                          <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true" prefHeight="116.0" prefWidth="208.0">
+                              <children>
+                                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="191.0" text="View school boards">
+                                      <font>
+                                          <Font name="Papyrus" size="20.0" />
+                                      </font>
+                              </Label>
+                                  <Pane HBox.hgrow="ALWAYS" />
+                                  <ImageView fitHeight="44.0" fitWidth="41.0">
+                                      <image>
+                                          <Image url="@../assets/eye.png" />
+                                      </image>
+                                  </ImageView>
+                              </children>
+                          </HBox>
+                      </graphic>
+                  </Button>
+               </children>
+            </StackPane>
+            <StackPane layoutX="5.0" layoutY="618.0" prefHeight="155.0" prefWidth="343.0">
+               <children>
+                  <Button fx:id="backButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#back" prefHeight="120.0" prefWidth="266.0">
+                     <graphic>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mouseTransparent="true" prefHeight="116.0" prefWidth="208.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="47.0" prefWidth="206.0" text="Back">
+                                 <font>
+                                    <Font name="Papyrus" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Pane HBox.hgrow="ALWAYS" />
+                              <ImageView fitHeight="44.0" fitWidth="41.0">
+                                 <image>
+                                    <Image url="@../assets/back.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </Button>
+               </children>
+            </StackPane>
+                <Label fx:id="messageLabel" alignment="CENTER" layoutX="4.0" layoutY="58.0" prefHeight="117.0" prefWidth="339.0">
+                    <font>
+                        <Font name="Papyrus" size="20.0" />
+                    </font>
+                </Label>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="1046.0" prefHeight="26.0" prefWidth="341.0" text="Tips: Hover your curser on islands or the bag to see details" />
+            <Label fx:id="phaseLabel" alignment="CENTER" layoutX="18.0" layoutY="6.0" prefHeight="37.0" prefWidth="319.0">
+               <font>
+                  <Font name="Papyrus" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+        <AnchorPane fx:id="anchorPane" maxHeight="1080.0" maxWidth="1600.0" prefHeight="1080.0" prefWidth="1562.0" style="-fx-background-color: #69bae9;" BorderPane.alignment="CENTER">
+            <children>
+            <StackPane fx:id="cloud1" layoutX="819.0" layoutY="333.0" onMouseClicked="#cloud1Chosen" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="207.0" fitWidth="225.0">
+                     <image>
+                        <Image url="@../assets/Cloud.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane fx:id="cloud0" layoutX="618.0" layoutY="576.0" onMouseClicked="#cloud0Chosen" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="207.0" fitWidth="225.0">
+                     <image>
+                        <Image url="@../assets/Cloud.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane fx:id="cloud2" layoutX="527.0" layoutY="333.0" onMouseClicked="#cloud2Chosen" prefHeight="150.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ImageView fitHeight="207.0" fitWidth="225.0">
+                     <image>
+                        <Image url="@../assets/Cloud.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane fx:id="cloud3" layoutX="895.0" layoutY="576.0" onMouseClicked="#cloud3Chosen" prefHeight="150.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ImageView fitHeight="207.0" fitWidth="225.0">
+                     <image>
+                        <Image url="@../assets/Cloud.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <ImageView fx:id="bag" fitHeight="65.0" fitWidth="46.0" layoutX="1502.0" layoutY="14.0">
+               <image>
+                  <Image url="@../assets/bag.png" />
+               </image>
+            </ImageView>
+            <Button disable="true" mnemonicParsing="false" onAction="#fullScreen" text="Fullscreen" visible="false" />
+            </children>
+        </AnchorPane>
+   </left>
+   <center>
+      <Separator orientation="VERTICAL" prefHeight="1080.0" prefWidth="0.0" style="-fx-border-width: 5; -fx-border-color: black; -fx-padding: 0;" stylesheets="@../CSS/Separator.css" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
