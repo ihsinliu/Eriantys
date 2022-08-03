@@ -12,7 +12,7 @@ The repository is dedicated to the final project of "Ingegneria del Software (20
 
 
 ---
-## Group Components
+## Group Members
 
 | Surname | Name | E-mail | Student number |
 |:--------|:-----|:-------|:---------------|
@@ -32,8 +32,6 @@ The repository is dedicated to the final project of "Ingegneria del Software (20
 | All character cards | 🟢 |
 | 4 Player Game | 🟢 |
 | Multiple matches | 🟢 |
-| Persistence | 🔴 |
-| Resilience to disconnections | 🔴 |
 
 ## Instructions
 
